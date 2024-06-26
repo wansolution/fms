@@ -15,3 +15,32 @@ This line of code instructs the server to always set the X-XSS-Protection header
 Saving the Configuration File: After adding the line, save the file and close the editor.
 Effect of the Settings: With these settings enabled, if a cross-site scripting attack is detected by the browser, it will attempt to sanitize the page, neutralizing the malicious script. Furthermore, in more severe cases, it may prevent the rendering of the page altogether to safeguard the user’s data and privacy.
 Restarting Apache: To apply the changes, restart the Apache service. This can typically be done using a command like sudo systemctl restart apache2 on most Linux distributions.
+
+
+
+
+or do in tomcat 
+
+
+
+Enabling Secure HTTP Header in Apache Tomcat 8.5
+Secure HTTP Headers provide protection against Cross-Site Scripting (XSS) attacks, cross-site request forgery, and other unauthorized actions.
+To enable secure HTTP Header in Apache Tomcat, PTC recommends following steps. These steps will set the following:
+• X-Frame-Options: DENY
+• X-Content-Type-Options: nosniff
+• X-XSS-Protection: 1; mode=block
+* 
+It is recommended to take a backup of any configuration file before making changes in it.
+1. Open <Tomcat install directory>\conf\web.xml in a text editor.
+2. Uncomment the following filter (by default, it is commented):
+<filter>
+	<filter-name>httpHeaderSecurity</filter-name>
+   <filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
+        async-supported>true</async-supported>
+</filter>
+3. Add the following immediately after the above filter:
+<filter-mapping>
+    <filter-name>httpHeaderSecurity</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+4. Save web.xml.
