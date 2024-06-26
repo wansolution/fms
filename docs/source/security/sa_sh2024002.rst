@@ -1,6 +1,40 @@
 Security Hardening Add-on for FMS ( SH2024-002 )
 ======
 
+** Adding HTTP security headers 
+
+A) Apache server 
+-----
+
+1. Open the Apache configuration file
+
+- sudo nano /etc/httpd/conf/httpd.conf
+
+ 
+
+2. Add headers to the config file
+
+- Header always set X-XSS-Protection: "1; mode=block"
+- Header always set X-Content-Type-Options: "nosniff"
+- Header always set X-Frame-Options: "SAMEORIGIN"
+- Header always set Content-Security-Policy: "default-src 'self'"
+- Header always set Referrer-Policy: "strict-origin-when-cross-origin"
+- Header always set Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
+
+ 
+
+3. Save and close the configuration file
+
+ 
+
+4. Restart the Apache server
+
+- sudo service httpd restart
+
+
+
+B) Tomcat Server 
+---
 **Secure Apache from Cross-Site Scripting (XSS)**
 One effective method to safeguard your Apache web server against XSS attacks is through the implementation of the `X-XSS-Protection header. This approach is both straightforward and robust.
 
