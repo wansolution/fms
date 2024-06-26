@@ -34,7 +34,7 @@ A) Apache server
 
 
 B) Tomcat Server 
----
+-----
 **Secure Apache from Cross-Site Scripting (XSS)**
 One effective method to safeguard your Apache web server against XSS attacks is through the implementation of the `X-XSS-Protection header. This approach is both straightforward and robust.
 
