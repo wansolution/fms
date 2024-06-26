@@ -24,9 +24,6 @@ A) Apache server
  
 
 3. Save and close the configuration file
-
- 
-
 4. Restart the Apache server
 
 - sudo service httpd restart
