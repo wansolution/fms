@@ -20,7 +20,7 @@ Restarting Apache: To apply the changes, restart the Apache service. This can ty
 
 
 or do in tomcat 
-
+ref : https://support.ptc.com/help/arbortext/r8.2.1.0/en/index.html#page/PE/peinstall/pe2095.html
 
 
 Enabling Secure HTTP Header in Apache Tomcat 8.5
