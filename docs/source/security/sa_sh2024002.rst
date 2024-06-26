@@ -8,7 +8,8 @@ A) Apache server
 
 1. Open the Apache configuration file
 
-- sudo nano /etc/httpd/conf/httpd.conf
+- vi /etc/apache2/conf-enabled/security.conf or
+- vi /etc/httpd/conf/httpd.conf
 
  
 
