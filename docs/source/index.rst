@@ -17,4 +17,4 @@ Contents
 
    usage
    api
-   security
+   security/index
