@@ -8,9 +8,7 @@ A) Apache server
 
 1. Open the Apache configuration file
 
-````
-$ vi /etc/apache2/conf-enabled/security.conf
-````
+``$ vi /etc/apache2/conf-enabled/security.conf``
 
 
 
