@@ -16,7 +16,8 @@ for Ubuntu:
 
 
 for Fedora:
-``$ vi /etc/httpd/conf/httpd.conf``
+.. code-block:: console
+   $ vi /etc/httpd/conf/httpd.conf
 
 
 2. Add headers to the config file
