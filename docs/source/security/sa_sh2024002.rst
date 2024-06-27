@@ -106,3 +106,7 @@ Ensure mod_headers is Enabled: Verify that mod_headers is enabled.
 .. tip::
    sudo a2enmod headers
    sudo systemctl restart apache2
+
+.. image:: images/securecookies.jpg
+   :alt: Secure cookies
+   :align: center
