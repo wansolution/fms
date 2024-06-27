@@ -99,3 +99,10 @@ in /etc/apache2/sites-available/domainname-le-ssl.conf
 .. image:: images/securesessioncookies.jpg
    :alt: Secure session cookies
    :align: center
+
+
+Ensure mod_headers is Enabled: Verify that mod_headers is enabled.
+
+.. tip::
+   sudo a2enmod headers
+   sudo systemctl restart apache2
