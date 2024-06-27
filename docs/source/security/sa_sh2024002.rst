@@ -8,8 +8,15 @@ A) Apache server
 
 1. Open the Apache configuration file
 
-- vi /etc/apache2/conf-enabled/security.conf or
-- vi /etc/httpd/conf/httpd.conf
+.. terminal::
+   :input: vi /etc/apache2/conf-enabled/security.conf
+   :user: root
+   :host: vm
+
+.. terminal::
+   :input: vi /etc/httpd/conf/httpd.conf
+   :user: root
+   :host: vm
 
  
 
@@ -86,9 +93,13 @@ It is recommended to take a backup of any configuration file before making chang
 Set session cookies to secure
 ------
 
-Because its difficult to get CFM server to issue secure cookies, we can do it at apache server
+We can set at the application level using :
 
-for only on
+<cfset sessionCookie = { httpOnly=true, secure=true }>
+<cfapplication ... sessionCookie="#sessionCookie#">
+
+Sometimes its difficult to get CFM server to issue secure cookies, we can do it at apache server as follows :
+
 in /etc/apache2/sites-available/domainname-le-ssl.conf
 
 ## Add the Header edit directive to ensure HttpOnly and Secure attributes for cookies
