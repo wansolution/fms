@@ -16,7 +16,9 @@ for Ubuntu:
 
 
 for Fedora:
+
 .. code-block:: console
+
    $ vi /etc/httpd/conf/httpd.conf
 
 
