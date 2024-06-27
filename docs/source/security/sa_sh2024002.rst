@@ -91,8 +91,9 @@ Because its difficult to get CFM server to issue secure cookies, we can do it at
 for only on
 in /etc/apache2/sites-available/domainname-le-ssl.conf
 
-# Add the Header edit directive to ensure HttpOnly and Secure attributes for cookies
-    #Header edit Set-Cookie ^(.*)$ "$1; Secure"
+## Add the Header edit directive to ensure HttpOnly and Secure attributes for cookies
+    Header edit Set-Cookie ^(.*)$ "$1; Secure"
+    or
     Header edit Set-Cookie ^(.*)$ "$1; HttpOnly; Secure; SameSite=Strict"
 
 .. image:: images/securesessioncookies.jpg
