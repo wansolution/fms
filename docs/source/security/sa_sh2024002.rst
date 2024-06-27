@@ -8,10 +8,9 @@ A) Apache server
 
 1. Open the Apache configuration file
 
-.. terminal::
-   :input: vi /etc/apache2/conf-enabled/security.conf
-   :user: root
-   :host: vm
+```
+$ vi /etc/apache2/conf-enabled/security.conf
+```
 
 
 
