@@ -7,8 +7,10 @@ A) Apache server
 ------
 
 1. Open the Apache configuration file
+
 for Ubuntu:
 ``$ vi /etc/apache2/conf-enabled/security.conf``
+
 for Fedora:
 ``$ vi /etc/httpd/conf/httpd.conf``
 
