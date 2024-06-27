@@ -4,7 +4,7 @@ Security Hardening Add-on for FMS ( SH2024-002 )
 ** Adding HTTP security headers 
 
 A) Apache server 
------
+------
 
 1. Open the Apache configuration file
 
@@ -32,7 +32,7 @@ A) Apache server
 
 
 B) Tomcat Server 
------
+------
 **Secure Apache from Cross-Site Scripting (XSS)**
 One effective method to safeguard your Apache web server against XSS attacks is through the implementation of the `X-XSS-Protection header. This approach is both straightforward and robust.
 
@@ -76,3 +76,25 @@ It is recommended to take a backup of any configuration file before making chang
     <url-pattern>/*</url-pattern>
 </filter-mapping>
 4. Save web.xml.
+
+
+
+
+
+
+
+Set session cookies to secure
+------
+
+Because its difficult to get CFM server to issue secure cookies, we can do it at apache server
+
+for only on
+in /etc/apache2/sites-available/domainname-le-ssl.conf
+
+# Add the Header edit directive to ensure HttpOnly and Secure attributes for cookies
+    #Header edit Set-Cookie ^(.*)$ "$1; Secure"
+    Header edit Set-Cookie ^(.*)$ "$1; HttpOnly; Secure; SameSite=Strict"
+
+.. image:: images/securesessioncookies.jpg
+   :alt: Secure session cookies
+   :align: center
