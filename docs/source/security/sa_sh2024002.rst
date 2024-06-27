@@ -13,12 +13,7 @@ A) Apache server
    :user: root
    :host: vm
 
-.. terminal::
-   :input: vi /etc/httpd/conf/httpd.conf
-   :user: root
-   :host: vm
 
- 
 
 2. Add headers to the config file
 
