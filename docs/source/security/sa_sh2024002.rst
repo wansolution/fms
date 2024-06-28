@@ -123,7 +123,8 @@ or
 
 Ensure mod_headers is Enabled: Verify that mod_headers is enabled.
 
-.. tip::
+.. code-block:: console
+
    sudo a2enmod headers
    sudo systemctl restart apache2
 
