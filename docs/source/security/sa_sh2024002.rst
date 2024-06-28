@@ -45,10 +45,13 @@ B) Tomcat Server
 **Secure Apache from Cross-Site Scripting (XSS)**
 One effective method to safeguard your Apache web server against XSS attacks is through the implementation of the `X-XSS-Protection header. This approach is both straightforward and robust.
 
-Editing the Configuration File: Navigate to your Apache configuration file. This file is typically located at /etc/httpd/conf/httpd.conf for Apache installations on Linux or /etc/apache2/conf-enabled/security.conf for other configurations.
+Editing the Configuration File: Navigate to your Apache configuration file. This file is typically located at ``/etc/httpd/conf/httpd.conf`` for Apache installations on Linux or ``/etc/apache2/conf-enabled/security.conf`` for other configurations.
+
 Setting the X-XSS-Protection Header: Add the following line to the configuration file:
 
-Header always set X-XSS-Protection "1; mode=block"
+.. code-block:: console
+    
+    Header always set X-XSS-Protection "1; mode=block"
 
 This line of code instructs the server to always set the X-XSS-Protection header. The value “1; mode=block” activates the XSS Filter built into most modern web browsers.
 
