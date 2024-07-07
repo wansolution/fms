@@ -134,3 +134,17 @@ Ensure mod_headers is Enabled: Verify that mod_headers is enabled.
 .. image:: images/securecookies.jpg
    :alt: Secure cookies
    :align: center
+
+
+To fix the “Permissions Policy Header Not Set” vulnerability, you need to add the Permissions-Policy header to your web server configuration. This header allows you to specify which browser features can be used by your web resources. By setting appropriate permissions, you can restrict unauthorized access or usage of sensitive features such as camera, microphone, location, and full screen.
+
+To add the Permissions-Policy header, follow these steps:
+
+Apache: Add the following line to your .htaccess file or Apache configuration file:
+
+.. code-block:: console
+
+   Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), fullscreen=()"
+
+
+Make sure to adjust the permissions according to your specific requirements. For example, if your website requires camera access, you can remove the camera=() part from the header value.
