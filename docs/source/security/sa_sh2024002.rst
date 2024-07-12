@@ -135,6 +135,9 @@ Ensure mod_headers is Enabled: Verify that mod_headers is enabled.
    :alt: Secure cookies
    :align: center
 
+.. note::
+   you will need to delete cache to take effect
+
 
 To fix the “Permissions Policy Header Not Set” vulnerability, you need to add the Permissions-Policy header to your web server configuration. This header allows you to specify which browser features can be used by your web resources. By setting appropriate permissions, you can restrict unauthorized access or usage of sensitive features such as camera, microphone, location, and full screen.
 
