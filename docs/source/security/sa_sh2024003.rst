@@ -1,0 +1,12 @@
+Hide Tomcat Version
+=========
+
+
+
+
+# Open the server.xml file located in the <tomcat directory>/conf.
+# Enter the following value in the <Host> tag:
+
+<Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false"/>
+
+#Restart the Tomcat service.
