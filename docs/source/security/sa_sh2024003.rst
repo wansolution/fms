@@ -15,3 +15,11 @@ Hide Tomcat Version
 
 
 3. Restart the Tomcat service.
+
+
+for Ubuntu:
+
+.. code-block:: console
+
+    vi /etc/apache2/conf-enabled/security.conf
+
