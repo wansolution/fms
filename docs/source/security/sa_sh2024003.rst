@@ -11,15 +11,9 @@ Hide Tomcat Version
 
 .. code-block:: console
 
-<Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false"/>
+   <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false"/>
 
 
 3. Restart the Tomcat service.
 
-
-for Ubuntu:
-
-.. code-block:: console
-
-    vi /etc/apache2/conf-enabled/security.conf
 
