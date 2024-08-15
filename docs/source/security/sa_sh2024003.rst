@@ -7,7 +7,7 @@ Hide Tomcat Version
 1. Open the server.xml file located in the <tomcat directory>/conf.
 
 
-2. Enter the following value in the <Host> tag:
+2. Add the following line in the <Host> tag:
 
 .. code-block:: console
 
